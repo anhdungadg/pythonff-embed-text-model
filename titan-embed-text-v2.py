@@ -4,6 +4,42 @@ import time
 import concurrent.futures
 from typing import List, Optional, Dict, Union, Tuple
 
+"""
+#Change logs:
+
+1. Xử lý lỗi và ngoại lệ:
+   • Thêm try-except để bắt lỗi khi gọi API
+   • Trả về None thay vì gây crash khi có lỗi
+
+2. Hệ thống cache:
+   • Thêm tùy chọn lưu trữ kết quả embedding để tránh gọi API lặp lại
+   • Thêm phương thức clear_cache() để xóa cache khi cần
+
+3. Xử lý batch và đa luồng:
+   • Thêm phương thức batch_embed() để xử lý nhiều văn bản tuần tự
+   • Thêm phương thức parallel_batch_embed() sử dụng ThreadPoolExecutor để xử lý song song
+
+4. Đo hiệu suất:
+   • Thêm tùy chọn measure_performance để đo thời gian tạo embedding
+
+5. Tính năng phân tích:
+   • Thêm phương thức cosine_similarity() để tính độ tương đồng giữa các embedding
+   • Thêm phương thức find_similar_texts() để tìm văn bản tương tự
+
+6. Lưu trữ và trực quan hóa:
+   • Thêm phương thức save_embedding() và load_embedding() để lưu và tải embedding từ file
+   • Thêm phương thức visualize_embeddings() để trực quan hóa embedding bằng t-SNE
+
+7. Hỗ trợ đa ngôn ngữ:
+   • Thêm phương thức get_model_for_language() để chọn mô hình phù hợp với ngôn ngữ
+
+8. Cải thiện kiểu dữ liệu:
+   • Sử dụng type hints để làm rõ kiểu dữ liệu đầu vào và đầu ra
+   • Thêm docstrings chi tiết cho mỗi phương thức
+
+9. Ví dụ sử dụng:
+   • Thêm phần mã ví dụ ở cuối file để minh họa cách sử dụng các tính năng mới
+"""
 
 class TitanEmbeddings:
     accept = "application/json"
