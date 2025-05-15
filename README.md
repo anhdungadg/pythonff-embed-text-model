@@ -86,6 +86,27 @@ print(f"10 phần tử đầu tiên của embedding: {embedding[:10]}")
 - Phân tích cảm xúc
 - Tích hợp với các mô hình ngôn ngữ lớn (LLM)
 
+## Thông tin về các mô hình Amazon Titan Embeddings
+
+### Titan Text Embeddings V2
+- Mô hình mới nhất và hiệu quả nhất
+- **Kích thước embedding linh hoạt**: 1024, 512 và 256
+- Được tối ưu hóa cho độ chính xác cao
+- **Khả năng xử lý**: tối đa 8000 token
+- **Hỗ trợ ngôn ngữ**: hơn 100 ngôn ngữ, bao gồm Tiếng Việt
+- **Điểm mạnh**: hiệu suất mạnh mẽ trong các tác vụ liên quan đến dữ liệu có cấu trúc hoặc bán cấu trúc
+
+### Titan Multimodal Embeddings G1
+- Mô hình đa phương thức xử lý cả văn bản và hình ảnh
+- **Giới hạn token**: 128 token cho văn bản
+- **Ứng dụng**: được thiết kế đặc biệt cho các trường hợp tìm kiếm hình ảnh bằng văn bản hoặc kết hợp văn bản và hình ảnh
+
+### Titan Embeddings G1 - Text v1.2
+- **Vector đầu ra**: cố định 1536 chiều
+- **Khả năng xử lý**: tối đa 8000 token
+- **Hỗ trợ ngôn ngữ**: hơn 25 ngôn ngữ
+- **Tối ưu hóa cho**: các tác vụ truy xuất văn bản, tương đồng ngữ nghĩa và phân cụm
+
 ## Lưu ý
 
 - Đảm bảo tài khoản AWS của bạn có quyền truy cập vào dịch vụ Amazon Bedrock và mô hình Titan Embeddings.
